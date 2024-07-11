@@ -10,9 +10,7 @@ Route::get('/books/{id}', function(){
     return "libro";
 });
 
-Route::post('/books', function(){
-    return "creando libros";
-});
+Route::post('/books', [bookController::class, 'save']);
 
 Route::put('/books/{id}', function(){
     return "actualizando libro";
