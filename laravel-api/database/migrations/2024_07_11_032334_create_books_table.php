@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('death_year');
             $table->string('language');
             $table->string('genres');
+            $table->integer('downloads');
             $table->string('pdf_path');
             $table->string('image_path');
             $table->timestamps();

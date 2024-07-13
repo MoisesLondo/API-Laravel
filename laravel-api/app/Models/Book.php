@@ -18,6 +18,7 @@ class Book extends Model
         'death_year',
         'language',
         'genres',
+        'downloads',
         'pdf_path',
         'image_path'
 

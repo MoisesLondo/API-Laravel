@@ -24,6 +24,7 @@ class bookController extends Controller
             'death_year' => 'required',
             'language' => 'required',
             'genres' => 'required',
+            'downloads' => 'required',
             'pdf_path' => 'required',
             'image_path' => 'required',
         ]);
@@ -45,6 +46,7 @@ class bookController extends Controller
             'death_year' => $request->death_year,
             'language' => $request->language,
             'genres' => $request->genres,
+            'downloads' => $request->downloads,
             'pdf_path' => $request->pdf_path,
             'image_path' => $request->image_path,
         ]);
@@ -118,6 +120,7 @@ class bookController extends Controller
             'death_year' => 'required',
             'language' => 'required',
             'genres' => 'required',
+            'downloads' => 'required',
             'pdf_path' => 'required',
             'image_path' => 'required',
         ]);
@@ -136,6 +139,7 @@ class bookController extends Controller
         $book->death_year = $request->death_year;
         $book->language = $request->language;
         $book->genres = $request->genres;
+        $book->downloads = $request->downloads;
         $book->pdf_path = $request->pdf_path;
         $book->image_path = $request->image_path;
 
