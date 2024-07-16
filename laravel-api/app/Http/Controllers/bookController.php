@@ -116,10 +116,10 @@ class bookController extends Controller
         $validator = Validator::make($request->all(),[
             'title' => 'required',
             'author' => 'required',
-            'birth_year' => 'required',
-            'death_year' => 'required',
+            'birth_date' => 'required',
+            'death_date' => 'required',
             'language' => 'required',
-            'genres' => 'required',
+            'generos' => 'required',
             'downloads' => 'required',
             'pdf_path' => 'required',
             'image_path' => 'required',
@@ -135,10 +135,10 @@ class bookController extends Controller
         }
         $book->title = $request->title;
         $book->author = $request->author;
-        $book->birth_year = $request->birth_year;
-        $book->death_year = $request->death_year;
+        $book->birth_date = $request->birth_year;
+        $book->death_date = $request->death_year;
         $book->language = $request->language;
-        $book->genres = $request->genres;
+        $book->generos = $request->genres;
         $book->downloads = $request->downloads;
         $book->pdf_path = $request->pdf_path;
         $book->image_path = $request->image_path;

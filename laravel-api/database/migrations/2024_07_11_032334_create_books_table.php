@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('author');
-            $table->integer('birth_year');
-            $table->integer('death_year');
+            $table->integer('birth_date');
+            $table->integer('death_date');
             $table->string('language');
-            $table->string('genres');
+            $table->string('generos');
             $table->integer('downloads');
             $table->string('pdf_path');
             $table->string('image_path');
