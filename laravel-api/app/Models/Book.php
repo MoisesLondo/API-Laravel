@@ -23,4 +23,10 @@ class Book extends Model
         'image_path'
 
     ];
+
+    protected $casts = [
+        'author' => 'array',
+        'generos' => 'array',
+        'language' => 'array',
+    ];
 }

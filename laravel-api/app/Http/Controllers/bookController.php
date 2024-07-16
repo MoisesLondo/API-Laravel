@@ -19,11 +19,14 @@ class bookController extends Controller
     public function save(Request $request){
         $validator = Validator::make($request->all(),[
             'title' => 'required',
-            'author' => 'required',
+            'author' => 'required|array',
+            'author.*' => 'string',
             'birth_date' => 'required',
             'death_date' => 'required',
-            'language' => 'required',
-            'generos' => 'required',
+            'language' => 'required|array',
+            'language.*' => 'string',
+            'generos' => 'required|array',
+            'generos.*' => 'string',
             'downloads' => 'required',
             'pdf_path' => 'required',
             'image_path' => 'required',
@@ -115,11 +118,14 @@ class bookController extends Controller
         }
         $validator = Validator::make($request->all(),[
             'title' => 'required',
-            'author' => 'required',
+            'author' => 'required|array',
+            'author.*' => 'string',
             'birth_date' => 'required',
             'death_date' => 'required',
-            'language' => 'required',
-            'generos' => 'required',
+            'language' => 'required|array',
+            'language.*' => 'string',
+            'generos' => 'required|array',
+            'generos.*' => 'string',
             'downloads' => 'required',
             'pdf_path' => 'required',
             'image_path' => 'required',
@@ -135,10 +141,10 @@ class bookController extends Controller
         }
         $book->title = $request->title;
         $book->author = $request->author;
-        $book->birth_date = $request->birth_year;
-        $book->death_date = $request->death_year;
+        $book->birth_date = $request->birth_date;
+        $book->death_date = $request->death_date;
         $book->language = $request->language;
-        $book->generos = $request->genres;
+        $book->generos = $request->generos;
         $book->downloads = $request->downloads;
         $book->pdf_path = $request->pdf_path;
         $book->image_path = $request->image_path;
