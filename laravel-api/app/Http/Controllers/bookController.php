@@ -20,9 +20,6 @@ class bookController extends Controller
         $validator = Validator::make($request->all(),[
             'title' => 'required',
             'author' => 'required|array',
-            'author.*' => 'string',
-            'birth_date' => 'required',
-            'death_date' => 'required',
             'language' => 'required|array',
             'language.*' => 'string',
             'generos' => 'required|array',
@@ -45,8 +42,6 @@ class bookController extends Controller
         $book = Book::create([
             'title' => $request->title,
             'author' => $request->author,
-            'birth_date' => $request->birth_date,
-            'death_date' => $request->death_date,
             'language' => $request->language,
             'generos' => $request->generos,
             'downloads' => $request->downloads,
@@ -119,9 +114,6 @@ class bookController extends Controller
         $validator = Validator::make($request->all(),[
             'title' => 'required',
             'author' => 'required|array',
-            'author.*' => 'string',
-            'birth_date' => 'required',
-            'death_date' => 'required',
             'language' => 'required|array',
             'language.*' => 'string',
             'generos' => 'required|array',
@@ -141,8 +133,6 @@ class bookController extends Controller
         }
         $book->title = $request->title;
         $book->author = $request->author;
-        $book->birth_date = $request->birth_date;
-        $book->death_date = $request->death_date;
         $book->language = $request->language;
         $book->generos = $request->generos;
         $book->downloads = $request->downloads;

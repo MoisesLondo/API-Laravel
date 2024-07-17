@@ -15,8 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->json('author');
-            $table->integer('birth_date');
-            $table->integer('death_date');
             $table->json('language');
             $table->json('generos');
             $table->integer('downloads');
