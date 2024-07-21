@@ -12,15 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('trips', function (Blueprint $table) {
-            $table->id();
-            $table->string('origin');
-            $table->string('destiny');
-            $table->string('date');
-            $table->string('hour');
-            $table->integer('seats');
-            $table->string('description');
-            $table->timestamps();
-        });
+             $table->id();
+             $table->string('origin');
+             $table->string('destiny');
+             $table->string('date');
+             $table->string('hour');
+             $table->integer('seats');
+             $table->string('description');
+             $table->timestamps();
+         });
     }
 
     /**
