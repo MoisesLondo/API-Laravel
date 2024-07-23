@@ -65,23 +65,6 @@ class bookController extends Controller
         return response()->json($data,201);
     }
 
-    public function oneBook($id){
-        $book = Book::find($id);
-        if(!$book){
-            $data = [
-                'message' => 'El libro no existe',
-                'status' => 404
-            ];
-            return response()->json($data,404);
-
-        }
-        $data = [
-            'book' => $book,
-            'status' => 200
-        ];
-        return response()->json($data,200);
-    }
-
     public function delete($id){
         $book = Book::find($id);
         if(!$book){
