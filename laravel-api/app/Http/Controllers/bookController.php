@@ -19,11 +19,11 @@ class bookController extends Controller
     public function save(Request $request){
         $validator = Validator::make($request->all(),[
             'title' => 'required',
-            'author' => 'required|array',
-            'language' => 'required|array',
-            'language.*' => 'string',
-            'generos' => 'required|array',
-            'generos.*' => 'string',
+            'author' => 'required',
+            'birth' => 'required',
+            'death' => 'required',
+            'language' => 'required',
+            'generos' => 'required',
             'downloads' => 'required',
             'pdf_path' => 'required',
             'image_path' => 'required',
@@ -42,6 +42,8 @@ class bookController extends Controller
         $book = Book::create([
             'title' => $request->title,
             'author' => $request->author,
+            'birth' => $request->birth,
+            'death' => $request->death,
             'language' => $request->language,
             'generos' => $request->generos,
             'downloads' => $request->downloads,
@@ -96,11 +98,11 @@ class bookController extends Controller
         }
         $validator = Validator::make($request->all(),[
             'title' => 'required',
-            'author' => 'required|array',
-            'language' => 'required|array',
-            'language.*' => 'string',
-            'generos' => 'required|array',
-            'generos.*' => 'string',
+            'author' => 'required',
+            'birth' => 'required',
+            'death' => 'required',
+            'language' => 'required',
+            'generos' => 'required',
             'downloads' => 'required',
             'pdf_path' => 'required',
             'image_path' => 'required',
@@ -116,6 +118,8 @@ class bookController extends Controller
         }
         $book->title = $request->title;
         $book->author = $request->author;
+        $book->birth = $request->birth;
+        $book->death = $request->death;
         $book->language = $request->language;
         $book->generos = $request->generos;
         $book->downloads = $request->downloads;

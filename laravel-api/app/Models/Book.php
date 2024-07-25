@@ -14,17 +14,13 @@ class Book extends Model
     protected $fillable = [
         'title',
         'author',
+        'birth',
+        'death',
         'language',
         'generos',
         'downloads',
         'pdf_path',
         'image_path'
 
-    ];
-
-    protected $casts = [
-        'author' => 'array',
-        'generos' => 'array',
-        'language' => 'array',
     ];
 }
